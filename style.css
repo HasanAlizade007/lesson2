@@ -1,0 +1,123 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+
+/* *{
+    box-sizing: border-box;
+    margin: auto;
+}
+div{
+    background-color: teal;
+    margin: 40px;
+    padding: 15px 25px;
+    width: 250px;
+    border: 5px solid black;
+} */
+/* 
+.machintosh{
+    color: darkblue;
+    background-color: yellow;
+    display: block;
+}
+.models{
+    color: darkblue;
+}
+.title{
+    color: darkblue;
+} */
+/* 
+.boxes{
+    margin: 20px;
+    height: 500px;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.card1, .card2, .card3, .card4{
+    width: 300px;
+    background-color: rebeccapurple;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 25px;
+}
+img{
+    width: 50px;
+}
+.card-holder{
+    margin-left: 10px;
+}
+.date{
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.number{
+    font-size: 20px;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.name{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: monospace;
+}
+.text{
+    font-size: 12px;
+}
+.span{
+    font-size: 18px;
+}
+.visa{
+    width: 80px;
+    float: right;
+}
+.leo{
+    width: 100px;
+    float: right;
+    margin-top: 5px;
+}
+
+.card2{
+    background-color: darkgreen;
+}
+
+.card3{
+    background-color: black;
+}
+
+.card4{
+    background-color: darkblue;
+}
+
+ */
+
+ body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #000;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
