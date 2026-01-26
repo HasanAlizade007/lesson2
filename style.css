@@ -1,74 +1,42 @@
-/* Ümumi fon */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    background-color: #2c2f3a;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    margin: 0;
-    padding-top: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Əsas panel */
-.container {
-    background-color: #d1d5db;
-    width: 400px;
-    padding-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-header {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
     padding: 20px;
 }
 
-h1 {
-    font-size: 22px;
-    margin: 0;
-    color: #111;
+#crypto-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-p {
-    font-size: 13px;
-    margin-top: 10px;
-    color: #444;
-}
-
-/* Siyahı dizaynı */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    padding: 8px 20px;
-    font-size: 16px;
-    color: #1a2a44;
-    font-weight: 500;
-}
-
-/* Hər cüt sətirə (2, 4, 6...) mavi fon verir */
-li:nth-child(even) {
-    background-color: #94b9d5;
-}
-
-/* Düymə hissəsi */
-.button-area {
-    text-align: center;
-    margin-top: 20px;
-}
-
-button {
-    background-color: #4a5568;
+thead th {
+    background-color: #8E44AD; /* Bənövşəyi başlıq */
     color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: 400;
 }
 
-button:hover {
-    background-color: #2d3748;
+tbody td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+/* Müsbət və mənfi dəyərlər üçün rənglər */
+.positive {
+    color: #27ae60; /* Yaşıl */
+}
+
+.negative {
+    color: #e74c3c; /* Qırmızı */
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
 }
