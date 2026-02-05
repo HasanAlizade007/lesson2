@@ -1,37 +1,37 @@
-const data = [
-    { "name": "Bitcoin", "ticker": "BTC", "value": "9685", "change": "2.83%" },
-    { "name": "Ethereum", "ticker": "ETH", "value": "210.5", "change": "6.17%" },
-    { "name": "Ripple", "ticker": "XRP", "value": "0.2812", "change": "-2.47%" },
-    { "name": "Bitcoin Cash", "ticker": "BCH", "value": "441.4", "change": "5.01%" },
-    { "name": "Bitcoin SV", "ticker": "BSV", "value": "303.17", "change": "5.53%" },
-    { "name": "Litecoin", "ticker": "LTC", "value": "74.935", "change": "4.25%" },
-    { "name": "Tether", "ticker": "USDT", "value": "0.9994", "change": "-0.01%" },
-    { "name": "EOS", "ticker": "EOS", "value": "4.6161", "change": "3.15%" },
-    { "name": "Binance Coin", "ticker": "BNB", "value": "19.824", "change": "3.82%" },
-    { "name": "Cardano", "ticker": "ADA", "value": "0.060389", "change": "2.93%" },
-    { "name": "Tezos", "ticker": "XTZ", "value": "2.1247", "change": "-6.12%" },
-    { "name": "Ethereum Classic", "ticker": "ETC", "value": "12.5988", "change": "4.09%" },
-    { "name": "Stellar", "ticker": "XLM", "value": "0.07034", "change": "4.10%" },
-    { "name": "Monero", "ticker": "XMR", "value": "79.523", "change": "3.45%" },
-    { "name": "TRON", "ticker": "TRX", "value": "0.020881", "change": "5.21%" }
+// Şəkil linklərini massivdə saxlayırıq
+const images = [
+    "https://picsum.photos/id/10/600/400",
+    "https://picsum.photos/id/20/600/400",
+    "https://picsum.photos/id/30/600/400",
+    "https://picsum.photos/id/40/600/400"
 ];
 
-const tableBody = document.getElementById('table-body');
+let currentIndex = 0; // Başlanğıc index
 
-data.forEach(item => {
-  
-    const row = document.createElement('tr');
+// Elementləri seçirik
+const sliderImage = document.getElementById('sliderImage');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-    
-    const changeValue = parseFloat(item.change);
-    const colorClass = changeValue >= 0 ? 'positive' : 'negative';
+// Şəkli yeniləyən funksiya
+function updateSlider() {
+    sliderImage.src = images[currentIndex];
+}
 
-    row.innerHTML = `
-        <td>${item.name}</td>
-        <td>${item.ticker}</td>
-        <td>${item.value}</td>
-        <td class="${colorClass}">${item.change}</td>
-    `;
+// "Next" düyməsi kliklənəndə
+nextBtn.addEventListener('click', () => {
+    currentIndex++; // İndeksi 1 artır
+    if (currentIndex >= images.length) {
+        currentIndex = 0; // Sona çatıbsa, birinciyə qayıt
+    }
+    updateSlider();
+});
 
-    tableBody.appendChild(row);
+// "Previous" düyməsi kliklənəndə
+prevBtn.addEventListener('click', () => {
+    currentIndex--; // İndeksi 1 azalt
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1; // Birincidədirsə, axırıncıya get
+    }
+    updateSlider();
 });

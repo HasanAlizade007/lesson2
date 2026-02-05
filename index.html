@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootcamp İştirakçıları</title>
+    <title>Image Slider</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-   <div id="crypto-table-container">
-    <table id="crypto-table">
-        <thead>
-            <tr>
-                <th>Название</th>
-                <th>Тикер</th>
-                <th>Цена</th>
-                <th>Изменение за 24 часа</th>
-            </tr>
-        </thead>
-        <tbody id="table-body">
-            </tbody>
-    </table>
-</div>
+    <div class="slider-container">
+        <button id="prevBtn">Previous</button>
+        
+        <div class="image-wrapper">
+            <img id="sliderImage" src="https://picsum.photos/id/10/600/400" alt="Slider">
+        </div>
+        
+        <button id="nextBtn">Next</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
